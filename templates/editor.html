@@ -1,5 +1,5 @@
 <!doctype html><html lang="kk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{"Өңдеу" if task else "Жаңа тапсырма"}}</title><link rel="stylesheet" href="/static/style.css"></head>
-<body><nav><div class="logo">🧩 MatchLab</div><a href="/admin" class="btn">← Артқа</a></nav><main class="container narrow"><h1>{{"Тапсырманы өңдеу" if task else "Жаңа тапсырма"}}</h1>
+<body><nav><div class="logo">👩‍🏫 Teacher Sabina</div><a href="/admin" class="btn">← Артқа</a></nav><main class="container narrow"><h1>{{"Тапсырманы өңдеу" if task else "Жаңа тапсырма"}}</h1>
 <form method="post" class="editor"><label>Тапсырма атауы</label><input name="title" value="{{task.title if task else ''}}" placeholder="Мысалы: Педагогика" required>
 <div id="rows">{% for p in pairs %}<div class="row"><span>{{loop.index}}</span><input name="left[]" value="{{p.left if p is mapping else p[0]}}" placeholder="Сол жақ" required><b>↔</b><input name="right[]" value="{{p.right if p is mapping else p[1]}}" placeholder="Дұрыс жауап" required><button type="button" class="delete" onclick="this.parentElement.remove()">×</button></div>{% endfor %}</div>
 <button type="button" class="btn add" onclick="addRow()">＋ Жұп қосу</button><button class="btn primary savebig">💾 Сақтау</button></form></main>
