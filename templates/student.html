@@ -1,5 +1,5 @@
 <!doctype html><html lang="kk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{task.title}}</title><link rel="stylesheet" href="/static/style.css"></head>
-<body><main class="student"><div class="studenthead"><div class="logo">🧩 MatchLab</div><h1>{{task.title}}</h1><p>Сәйкес карточкаларды қосыңыз.</p></div>
+<body><main class="student"><div class="studenthead"><div class="logo">👩‍🏫 Teacher Sabina</div><h1>{{task.title}}</h1><p>Сәйкес карточкаларды қосыңыз.</p></div>
 <div class="board" id="board"><svg id="lines"></svg><div id="left" class="col">{% for p in pairs %}<button class="card left" data-id="{{p.id}}">{{p.left}}</button>{% endfor %}</div><div id="right" class="col">{% for p in pairs|sort(attribute='right_text') %}<button class="card right" data-value="{{p.right_text}}">{{p.right_text}}</button>{% endfor %}</div></div>
 <div class="center"><button class="btn primary" onclick="check()">Тексеру</button><button class="btn" onclick="location.reload()">Қайта бастау</button><div id="result"></div></div></main>
 <script>
